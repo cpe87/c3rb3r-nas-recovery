@@ -1,0 +1,38 @@
+Corresponding source for the FFmpeg executable bundled in NAS Recovery Public 0.1.2.
+
+FFmpeg source is the unmodified n9.0.2 tag. Build configuration differs from
+general-purpose distributions: no external multimedia libraries, no network,
+no GPL/nonfree components; native decoders/demuxers, file/pipe protocols and
+null output for local full-stream validation. Assembly optimizations requiring
+NASM are disabled. This may decode slower than a general-purpose optimized build.
+
+Rebuild on Windows x64:
+1. Obtain w64devkit-x64-2.11.0.7z.exe from the exact URL in MANIFEST.json,
+   verify its SHA-256, and extract it to a fresh directory.
+2. Extract FFmpeg-n9.0.2-source.tar.gz. Put build-ffmpeg.sh next to that directory.
+3. Prepend w64devkit/bin to PATH for this shell only. Set TMPDIR to a writable
+   temporary directory if necessary. Enter FFmpeg-n9.0.2 and run:
+       sh ../build-ffmpeg.sh
+4. The output is ffmpeg.exe. Generated config headers and binary version,
+   license, protocol and DLL import reports are included for comparison.
+   Byte-identical builds are not promised; timestamps/toolchain environments
+   may differ. Rebuilds can replace the separate _internal/tools/ffmpeg.exe.
+
+FFmpeg is LGPL-2.1-or-later for this configuration. See FFmpeg-LICENSE.md and
+COPYING.LGPLv2.1. No FFmpeg source files were edited. This software is based in
+part on the work of the Independent JPEG Group; its referenced source files
+are unchanged. Other notices remain in the original source archive.
+
+The matching complete w64devkit source archive and build scripts are included,
+including MinGW-w64 runtime and GCC sources. GNU runtime exceptions and MinGW
+licenses apply to compiler runtime components, not FFmpeg's LGPL license.
+General-purpose build tools need not be installed by application users.
+
+Upstream locations:
+https://github.com/FFmpeg/FFmpeg/tree/n9.0.2
+https://github.com/skeeto/w64devkit/releases/tag/v2.11.0
+
+This source archive is embedded in the installer under _internal/source.
+Publish it separately alongside the installer as an additional convenience.
+No warranty is provided. The program does not limit replacement, modification
+or debugging of this independently invoked FFmpeg executable.

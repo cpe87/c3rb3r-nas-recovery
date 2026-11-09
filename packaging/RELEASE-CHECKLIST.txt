@@ -1,0 +1,31 @@
+NAS Recovery Public 0.1.3 - experimental release
+
+Release assets:
+  NAS-Recovery-Public-0.1.3-windows-x64-setup.exe
+  NAS-Recovery-Public-0.1.3-source.zip
+  FFmpeg-9.0.2-corresponding-source.zip
+  SHA256SUMS-0.1.3.txt
+  VALIDATION-0.1.3.json
+
+The installer already embeds the FFmpeg source bundle in _internal/source.
+The separate source download makes inspection easier; preserve it alongside
+the executable in GitHub/Gitee releases. The application source archive does
+not include the large FFmpeg source bundle; use both archives when rebuilding.
+FFmpeg build inputs and compiler source hashes are in the embedded MANIFEST.json.
+
+Do not describe the software as a universal ransomware decryptor. It attempts
+read-only retained-extent recovery on supported Btrfs layouts. Local packaging
+and synthetic decode tests are not cross-NAS recovery success measurements.
+Keep the experimental label, limits, licenses and first-run 10-file pilot.
+No private credentials, incident identifiers or recovery data are distributed.
+The installer has no publisher code-signing certificate.
+
+0.1.1 was an earlier local trial package. Use 0.1.3 for the source-complete
+FFmpeg configuration. No public upload is performed by the build scripts.
+
+中文版说明：
+发布时保留以上安装包、应用源码、FFmpeg 对应源码和校验/验证记录。
+安装包本身已包含 FFmpeg 对应源码，单独提供源码附件便于查阅。
+使用“实验版”名称，保留适用范围、4 GiB 单文件限制和默认 10 文件试点。
+不要把本地打包与测试视频的解码结果当作跨 NAS 恢复成功率。
+本安装包没有发行者代码签名证书；构建流程不会自动上传或发布。

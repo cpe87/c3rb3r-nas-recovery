@@ -1,0 +1,25 @@
+{
+  "ffmpeg_version": "9.0.2",
+  "configuration_license": "LGPL-2.1-or-later",
+  "external_multimedia_libraries": [],
+  "binary_sha256": "b8cfb5f8ba3f9e1c17f3b043424b2cf21a9170f9449185720d1abb7e68481e53",
+  "dll_imports": [
+    "bcrypt.dll",
+    "KERNEL32.dll",
+    "msvcrt.dll",
+    "SHELL32.dll"
+  ],
+  "source_files": {
+    "FFmpeg-n9.0.2-source.tar.gz": "6e374ed621e48faa40639307dff48ba6fe574a509977956d2cce9669b7cc27e9",
+    "w64devkit-2.11.0-source.tar": "50ee43ca02b9ca49e0e16da7eaf9701c9a396a019ebb2416a93d16769d53e5ff",
+    "w64devkit-v2.11.0-build-scripts.tar.gz": "d24cfcf20ae5a344fd005e66e64ec642f702eecec320d47d02d31410b0c83572",
+    "build-ffmpeg.sh": "18ca240a4ef7e11c84dc23574aa954a08d4e14c06ec9ff7ce558d8bfb710d280",
+    "config.h": "090cc24c99396028c10957cef33b5caa164107c474e4825e86753b5e5dd94e6d",
+    "config_components.h": "c7aa2074d88dfccb5960abe6ef930be0ea6ad1a78b6680a3e25d13214734f64d"
+  },
+  "upstream_ffmpeg_source": "https://github.com/FFmpeg/FFmpeg/archive/refs/tags/n9.0.2.tar.gz",
+  "compiler_binary_url": "https://github.com/skeeto/w64devkit/releases/download/v2.11.0/w64devkit-x64-2.11.0.7z.exe",
+  "compiler_binary_sha256": "54c2bb9962e8a30c8270e34c5efc3d5fee579f53087fa7d435b95fbba2af7b2b",
+  "compiler_source_url": "https://github.com/skeeto/w64devkit/releases/download/v2.11.0/source.tar",
+  "compiler_build_scripts_url": "https://github.com/skeeto/w64devkit/archive/refs/tags/v2.11.0.tar.gz"
+}
